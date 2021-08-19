@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tv Virtual</title>
+<style type="text/css">
+body{background:url(imagen/fondo.jpg)}
+.contenedor{width:600px;height:412px;margin:0 auto;background:url(imagen/tv.png);}
+.contenido{width:508px;height:286px;margin:0 auto 0px;background:white;position:relative;top:46px;}
+.botonera{width:520px;height:65px;margin:0 auto;text-align:center;}
+</style>
+
+<script type="text/javascript">
+	
+	function getAbsolutePath() {
+    var loc = window.location;
+    var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+    return loc.href.substring(0, loc.href.length - ((loc.pathname + loc.search + loc.hash).length - pathName.length));
+}
+
+    function apagar() { 
+    					if(document.getElementById("tv").src == getAbsolutePath()+"imagen/apagado.jpg")
+    						document.getElementById("tv").src = "imagen/encendido.jpg";
+    					else
+    						document.getElementById("tv").src = "imagen/apagado.jpg"
+    }
+
+	window.onload = function() { 
+		
+		document.getElementById("apagar").onclick = apagar;
+
+	
+	}
+
+</script>
+</head>
+
+
+
+
+<body>
+<div class="contenedor">
+  <div class="contenido"><img src="imagen/encendido.jpg" id="tv" width="508" height="286" /></div>
+</div>
+<div class="botonera">
+	<img src="imagen/apagar.jpg" id="apagar" width="127" height="65" />
+	
+</div>
+</body>
+</html>

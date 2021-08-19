@@ -1,0 +1,11 @@
+AJAX
+
+if (window.XMLHttpRequest) {
+		peticion_http = new XMLHttpRequest();
+}
+else if (window.ActiveXObject) {
+		peticion_http = new ActiveXObject("Microsoft.XMLHTTP")
+				}
+		peticion_http.onreadystatechange = xxxxx;
+		peticion_http.open('xxx', 'xxxxx', true);
+		peticion_http.send();
